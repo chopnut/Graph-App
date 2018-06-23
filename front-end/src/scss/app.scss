@@ -1,4 +1,39 @@
 /* some css */
-.my-class{
-    background-color: #ffffff;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+.container{
+    .__gutters{
+        padding: 10px;
+        text-align: center;
+    }
+    .header{
+        .graph{
+            @extend .__gutters;
+            background-color: #efefef;
+            border-radius: 10px;
+            margin: 0 auto;
+            width: 97%;
+        }
+        .control{
+            @extend .__gutters;
+            margin: 0 auto;
+            
+            .control-graph{
+                padding-bottom: 20px;
+            }
+            .control-search{
+            }
+        }
+    }
+    .body{
+        @extend .__gutters;
+
+    }
+    .footer{
+        margin: 0 auto;
+        display: table;
+        padding-bottom: 10px;
+    }
 }
