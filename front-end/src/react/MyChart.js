@@ -169,7 +169,7 @@ class MyChart extends Component {
           <VictoryChart
             height={250} // height of the chart
             width={600} // width of the chart
-            domainPadding={{ x: [10, 50] }} // padding x [left, right] and y [top, bottom]
+            domainPadding={{ x: [10, 35] }} // padding x [left, right] and y [top, bottom]
             scale={{ x: "time" }} // tells the chart what data to use, time (time is use for the data as new Date) | linear
             containerComponent={
               // must use for zooming when data is too big
