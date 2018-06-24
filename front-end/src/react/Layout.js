@@ -39,7 +39,6 @@ class Layout extends Component {
   componentDidMount() {
     const api = "https://intellipharm.com.au/devtest/index.php";
     const prom = axios.get(api);
-    console.log(api);
 
     prom
       .then(resp => {
@@ -65,14 +64,10 @@ class Layout extends Component {
         }));
       })
       .catch(error => {
-        console.log("NETWORK ERROR: !");
+        console.log("NETWORK ERROR: No connection");
       });
-
-    console.log("Props: ", this.props);
   }
   handleGraphChange(e, { value }) {
-    console.log("GRAPH: ", value);
-
     this.setState((prevState, props) => ({
       option_year_selected: value
     }));
@@ -97,15 +92,6 @@ class Layout extends Component {
         const curr_records = this.getRecords(1, pure_records);
         const total_count = pure_records.length;
         const total_pages = Math.ceil(total_count / this.state.per_page);
-
-        console.log(
-          "total pages: " +
-            total_count +
-            ", " +
-            total_pages +
-            "," +
-            this.state.per_page
-        );
 
         this.setState((prevState, props) => ({
           records: pure_records,
@@ -163,7 +149,6 @@ class Layout extends Component {
 
     const page_pointer = (cur_page - 1) * this.state.per_page;
     const page_limit = (page_pointer ? cur_page : 1) * this.state.per_page;
-    console.log("GetData: " + page_pointer + "," + page_limit);
 
     for (let i = page_pointer; i < page_limit; i++) {
       const element = curr_data[i];

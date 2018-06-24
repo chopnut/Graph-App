@@ -1,0 +1,37 @@
+/* some css */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px !important;
+}
+
+.container .__gutters,
+.container .header .graph,
+.container .header .control,
+.container .body {
+  padding: 10px;
+  text-align: center;
+}
+
+.container .header .graph {
+  background-color: #efefef;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 97%;
+}
+
+.container .header .control {
+  margin: 0 auto;
+}
+
+.container .header .control .control-graph {
+  padding-bottom: 20px;
+}
+
+.container .footer {
+  margin: 0 auto;
+  display: table;
+  padding-bottom: 10px;
+}
+
+/*# sourceMappingURL=main.css.map*/
